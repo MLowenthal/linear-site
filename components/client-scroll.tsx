@@ -1,6 +1,5 @@
 "use client";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { Button, Highlight } from "./button";
+import { Button } from "./button";
 
 const shortcuts = [
   { text: "Abstract", url: "http://abstract.com" },
@@ -105,7 +104,7 @@ const shortcuts = [
   { text: "Weaveworks", url: "http://weave.works" },
 ];
 
-const chunkArray = (array, chunkSize) => {
+const chunkArray = (array: { text: string; url: string }[], chunkSize: number): { text: string; url: string }[][] => {
   let result = [];
   for (let i = 0; i < array.length; i += chunkSize) {
     result.push(array.slice(i, i + chunkSize));
