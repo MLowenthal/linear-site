@@ -1,6 +1,6 @@
 
-export const LinkedInIcon = ({ url }) => (
-    <a href={url} target="_blank" rel="noopener noreferrer">
+export const LinkedInIcon = ({ url }: { url: string }) => (
+        <a href={url} target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
             width="18" height="18" fill="currentColor" viewBox="0 0 192 192">
             <g fill="none" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none">
