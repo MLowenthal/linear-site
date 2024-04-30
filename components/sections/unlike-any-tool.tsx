@@ -1,4 +1,3 @@
-
 import { Container } from "../container";
 import { BarChartIllustration } from "../illustrations/bar-chart";
 import { HubSpotLogo } from "../illustrations/hubspot-logo";
@@ -19,7 +18,7 @@ export const UnlikeAnyTool = () => (
         </p>
       </div>
     </Container>
-    <div className="h-[48rem] overflow-hidden md:h-auto md:overflow-auto">
+    <div className="h-[48rem] overflow-hidden md:h-auto md:overflow-visible">
       <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto px-8 pb-12 md:flex-wrap md:overflow-hidden">
         <div className="relative flex min-h-[48rem] w-full shrink-0 snap-center flex-col items-center justify-end overflow-hidden rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-8 text-center md:max-w-[calc(66.66%-12px)] md:basis-[calc(66.66%-12px)] md:p-14">
           <KeyboardShortcuts />
@@ -49,13 +48,12 @@ export const UnlikeAnyTool = () => (
         </div>
         <div className="relative flex min-h-[48rem] w-full shrink-0 snap-center flex-col items-center justify-start overflow-hidden rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-8 text-center md:max-w-[calc(66.66%-12px)] md:basis-[calc(66.66%-12px)] md:p-14">
           <div className="transition-opacity md:[.opened+&]:opacity-0">
-            <p className="mb-4 text-3xl">Your Moden RevOps Expert </p>
+            <p className="mb-4 text-3xl">Your Modern RevOps Expert</p>
             <p className="text-md text-primary-text">
               I can complete any request in record time using data + code
             </p>
           </div>
           <CardsChat/>
-
         </div>
       </div>
     </div>
