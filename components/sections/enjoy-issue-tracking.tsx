@@ -16,9 +16,9 @@ export const EnjoyIssueTracking = () => {
       <Features.Main
         title={
           <>
-            Endorsements by
+            Endorsements from
             <br />
-            people whose opinions matter
+            people who matter
           </>
         }
         image=""

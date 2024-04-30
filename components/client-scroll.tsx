@@ -125,12 +125,12 @@ export const KeyboardShortcuts = () => {
   return (
     <>
       {shortcutRows.map((rowShortcuts, rowIndex) => (
-        // Use Tailwind CSS for responsive design: hidden on mobile by default, block on medium screens and up
-        <div key={`row-${rowIndex}`} className="my-2 h-[4rem] min-h-[4rem] w-full overflow-x-auto md:block">
-          <div className="mask-shortcutkeys flex justify-center h-[6rem] max-w-full snap-x snap-mandatory gap-2 pb-8">
+        // Tailwind classes adjusted to prevent any overflow scrolling on mobile
+        <div key={`row-${rowIndex}`} className="my-2 h-[4rem] min-h-[4rem] w-full md:block">
+          <div className="mask-shortcutkeys flex justify-center items-center h-full max-w-full gap-2">
             {rowShortcuts.map((shortcut, index) => (
               <Button
-                className="shrink-0 snap-center first:ml-[40vw] last:mr-[40vw]"
+                className="shrink-0 snap-center mx-auto"
                 key={`${shortcut.text}-${rowIndex}`}
                 data-index={index}
                 onClick={() => onShortcutButtonClick(shortcut.url)}
@@ -145,3 +145,4 @@ export const KeyboardShortcuts = () => {
     </>
   );
 };
+
