@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Container } from "../container";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 
 const users = [
@@ -14,9 +15,12 @@ const messages = [
 ];
 
 export function CardsChat() {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    // This ensures that code only runs on the client side
+    setIsDesktop(window.innerWidth >= 1024);
+
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 1024);
     };
