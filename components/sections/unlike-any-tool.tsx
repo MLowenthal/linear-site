@@ -25,7 +25,7 @@ export const UnlikeAnyTool = () => (
           <KeyboardShortcuts />
           <p className="mb-4 text-3xl">Discover new clients</p>
           <p className="text-md text-primary-text">
-            I've <a className="underline" href="https://docs.google.com/spreadsheets/d/1lAczUu_2sleG91ns2FNP9QeY7wOLLQRNrZUmOpa89r8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">identified &gt;100 ideal fit customers</a> for Linear's sales team using public data.
+            I've <a className="underline" href="https://docs.google.com/spreadsheets/d/1lAczUu_2sleG91ns2FNP9QeY7wOLLQRNrZUmOpa89r8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">identified &gt;100 ideal customers</a> for Linear's sales team using public data.
           </p>
         </div>
         <div className="relative flex w-full shrink-0 snap-center flex-col items-center justify-end overflow-hidden rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-8 text-center md:basis-[calc(33.33%-12px)] md:p-14">
