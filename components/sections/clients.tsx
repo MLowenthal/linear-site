@@ -3,6 +3,7 @@ import { FNDLogo } from "../logos/foundation";
 import { GDLogo } from "../logos/glassdoor";
 import { CSLogo } from "../logos/cs";
 
+
 export const Clients = () => (
   <>
     <p className="mb-12 text-center text-lg text-white md:text-xl">
@@ -21,12 +22,21 @@ export const Clients = () => (
       <CSLogo url="https://www.youtube.com/@ColinandSamir" />
     </div>
 
-    {/* Mobile version: Adjusted to make logos in a 2x2 grid and take up full space available */}
-    <div className="flex flex-wrap justify-around gap-x-6 gap-y-8 md:hidden [&_svg]:w-1/2 [&_svg]:flex [&_svg]:items-center [&_svg]:justify-center">
-      <LinkedInLogo url="https://linkedin.com" />
-      <FNDLogo url="https://foundation.app" />
-      <GDLogo url="https://www.glassdoor.com/index.htm" />
-      <CSLogo url="https://www.youtube.com/@ColinandSamir" />
+    {/* Mobile version: Logos in a 2x2 grid */}
+    <div className="grid grid-cols-2 gap-6 px-4 py-4 md:hidden [&_svg]:max-w-full [&_svg]:basis-1/2">
+      <div>
+        <LinkedInLogo url="https://linkedin.com" />
+      </div>
+      <div>
+        <FNDLogo url="https://foundation.app" />
+      </div>
+      <div>
+        <GDLogo url="https://www.glassdoor.com/index.htm" />
+      </div>
+      <div>
+        <CSLogo url="https://www.youtube.com/@ColinandSamir" />
+      </div>
     </div>
   </>
 );
+
