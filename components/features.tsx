@@ -94,20 +94,19 @@ const FeatureGrid = ({ features } : FeatureGridProps) => {
             className="max-w-[25.6rem] px-4 md:px-0 [&_svg]:mb-[4px] [&_svg]:fill-white md:[&_svg]:mr-[6px] md:[&_svg]:mb-[2px] md:[&_svg]:inline flex flex-col justify-between h-full sm:h-auto"
             key={title}
           >
-            <div>
+            <div className="flex flex-col justify-start">
               <Icon />
               <span className="block text-white md:inline mb-1">{title}</span>
+              <p>{text}</p>
             </div>
-            <div>
-              <p className="mb-2">{text}</p>
-              <p className="italic text-right text-gray">{source}</p>
-            </div>
+            <p className="italic text-right text-gray mt-auto">{source}</p>
           </div>
         ))}
       </div>
     </Container>
   );
 };
+
 
 
 
