@@ -11,24 +11,21 @@ export const Clients = () => (
         I've worked with some of the world's best revenue teams.
       </span>
       <br className="hidden md:block" /> From startups to established enterprises.
-      <br className="hidden md:block" /> Across gaming, SaaS, and media. 
+      <br className="hidden md:block" /> Across gaming, SaaS, and media.
     </p>
 
-    {/* Main div for logos, maintaining desktop styles */}
-    <div className="flex flex-wrap justify-around gap-x-6 gap-y-8 [&_svg]:max-w-[16rem] [&_svg]:basis-[calc(25%-12px)]">
-      {/* Mobile styling: each logo takes half width of the viewport to form two columns */}
-      <div className="w-1/2 md:w-auto">
-        <LinkedInLogo url="https://linkedin.com" />
-      </div>
-      <div className="w-1/2 md:w-auto">
-        <FNDLogo url="https://foundation.app" />
-      </div>
-      <div className="w-1/2 md:w-auto">
-        <GDLogo url="https://www.glassdoor.com/index.htm" />
-      </div>
-      <div className="w-1/2 md:w-auto">
-        <CSLogo url="https://www.youtube.com/@ColinandSamir" />
-      </div>
+    <div className="hidden md:flex md:flex-wrap md:justify-around md:gap-x-6 md:gap-y-8 [&_svg]:md:max-w-[16rem] [&_svg]:md:basis-[calc(25%-12px)]">
+      <LinkedInLogo url="https://linkedin.com" />
+      <FNDLogo url="https://foundation.app" />
+      <GDLogo url="https://www.glassdoor.com/index.htm" />
+      <CSLogo url="https://www.youtube.com/@ColinandSamir" />
+    </div>
+
+    <div className="flex flex-wrap justify-around gap-x-6 gap-y-8 md:hidden [&_svg]:max-w-[50%] [&_svg]:basis-[50%]">
+      <LinkedInLogo url="https://linkedin.com" />
+      <FNDLogo url="https://foundation.app" />
+      <GDLogo url="https://www.glassdoor.com/index.htm" />
+      <CSLogo url="https://www.youtube.com/@ColinandSamir" />
     </div>
   </>
 );
