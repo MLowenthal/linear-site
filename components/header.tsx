@@ -8,32 +8,32 @@ import { Logo } from "./icons/logo";
 import classNames from "classnames";
 
 export const Header = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const html = document.querySelector("html");
     if (html) html.classList.toggle("overflow-hidden", hamburgerMenuIsOpen);
   }, [hamburgerMenuIsOpen]);
 
-  useEffect(() => {
-    const closeHamburgerNavigation = () => setHamburgerMenuIsOpen(false);
-
-    window.addEventListener("orientationchange", closeHamburgerNavigation);
-    window.addEventListener("resize", closeHamburgerNavigation);
-
-    return () => {
-      window.removeEventListener("orientationchange", closeHamburgerNavigation);
-      window.removeEventListener("resize", closeHamburgerNavigation);
-    };
-  }, [setHamburgerMenuIsOpen]);
+  const displayText = isMobile ? "Max + " : "Why Max is a Good Fit For ";
 
   return (
     <header className="fixed top-0 left-0 z-10 w-full border-b border-transparent-white backdrop-blur-[12px]">
       <Container className="flex items-center justify-between h-navigation-height">
-        <Link href="/" className="flex items-center space-x-2 text-md truncate">
-          <span>Why Max is a Good Fit For</span>
+        <Link href="/" className="flex items-center text-md">
+          <span className="mr-2 truncate">{displayText}</span>
           <Logo className="h-[1.8rem] w-[1.8rem]" />
-          <span>Linear</span>
+          <span className="ml-2 truncate">Linear</span>
         </Link>
 
         <div
