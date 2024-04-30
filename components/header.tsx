@@ -54,7 +54,6 @@ export const Header = () => {
               hamburgerMenuIsOpen ? "translate-x-0 opacity-100" : "translate-x-[-100vw] opacity-0"
             )}
           >
-            {/* Navigation items here */}
           </nav>
         </div>
 
