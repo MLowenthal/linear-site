@@ -22,7 +22,7 @@ const messages = [
 export function CardsChat() {
   return (
     <div className="flex justify-center items-start w-full pt-4">
-      <div className="flex flex-col space-y-4 pb-4 w-3/5">
+      <div className="flex flex-col space-y-4 pb-4 w-full sm:w-4/5 md:w-3/5">
         {messages.slice(0, 3).map((message, index) => {
           const user = users.find(u => u.userId === message.userId);
           const isUserMessage = message.role === "user";

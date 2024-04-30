@@ -34,7 +34,7 @@ export const EnjoyIssueTracking = () => {
           },
           {
             icon: AutomatedBacklogIcon,
-            title: "Does More With Less.",
+            title: "More With Less.",
             text: "I have rarely seen someone produce results with such limited resources.",
             source: "— Current Manager"
           },
