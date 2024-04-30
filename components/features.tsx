@@ -81,20 +81,23 @@ type FeatureGridProps = {
     icon: React.FC;
     title: string;
     text: string;
+    source: string;
   }[];
 };
 
-const FeatureGrid = ({ features }: FeatureGridProps) => {
+const FeatureGrid = ({ features } : FeatureGridProps) => {
   return (
     <Container>
       <div className="mb-16 grid w-full grid-cols-2 place-items-center gap-y-9 text-sm text-primary-text md:mb-[14rem] md:grid-cols-3 md:text-md">
-        {features.map(({ title, text, icon: Icon }) => (
+        {features.map(({ title, text, source, icon: Icon }) => (
           <div
             className="max-w-[25.6rem] [&_svg]:mb-[4px] [&_svg]:fill-white md:[&_svg]:mr-[6px] md:[&_svg]:mb-[2px] md:[&_svg]:inline"
             key={title}
           >
             <Icon />
-            <span className="block text-white md:inline">{title}</span> {text}
+            <span className="block text-white md:inline">{title}</span>
+            <p>{text}</p>
+            <p className="italic text-right text-gray">{source}</p>
           </div>
         ))}
       </div>

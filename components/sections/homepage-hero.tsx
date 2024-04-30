@@ -5,23 +5,14 @@ import { ChevronIcon } from "../icons/chevron";
 
 export const HomepageHero = () => (
   <Hero>
-    <Button
-      className="translate-y-[-1rem] animate-fade-in opacity-0"
-      href="/"
-      variant="secondary"
-      size="small"
-    >
-      <span>Linear 2022 Release – Built for scale</span>{" "}
-      <Highlight>→</Highlight>
-    </Button>
+    
     <HeroTitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-      Linear is a better way
-      <br className="hidden md:block" /> to build products
+      Hi. I'm Max.
+      <br className="hidden md:block" /> 
     </HeroTitle>
     <HeroSubtitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-      Meet the new standard for modern software development.
-      <br className="hidden md:block" /> Streamline issues, sprints, and product
-      roadmaps.
+      I'm the best candidate to help launch your Revenue Operations teams. 
+      <br className="hidden md:block" /> I have managed vendors, forecasted revenue, and grown companies. 
     </HeroSubtitle>
     <Button
       className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]"
@@ -29,7 +20,7 @@ export const HomepageHero = () => (
       variant="primary"
       size="large"
     >
-      <span>Get Started </span>
+      <span>Learn More About Me </span>
       <Highlight>
         <ChevronIcon />
       </Highlight>

@@ -94,7 +94,7 @@ export const HeroImage = () => {
         >
           <path pathLength="1" d="M1500 72L220 72"></path>
           <path pathLength="1" d="M1500 128L220 128"></path>
-          <path pathLength="1" d="M1500 189L220 189"></path>
+          <path pathLength="1" d="M1500 189L220 150"></path>
           <path pathLength="1" d="M220 777L220 1"></path>
           <path pathLength="1" d="M538 777L538 128"></path>
         </svg>
@@ -104,7 +104,7 @@ export const HeroImage = () => {
             "relative z-10 transition-opacity delay-[680ms]",
             inView ? "opacity-100" : "opacity-0"
           )}
-          src="/img/hero.webp"
+          src="/img/hero-max-two.png"
           alt="Hero image"
         />
       </div>

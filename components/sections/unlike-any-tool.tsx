@@ -1,21 +1,21 @@
-import { Button, Highlight } from "../button";
-import { CommandMenu } from "../command-menu";
+
 import { Container } from "../container";
-import { LogoLightIllustration } from "../illustrations/logo-light";
-import { ZapIllustration } from "../illustrations/zap";
-import { KeyboardShortcuts } from "../keyboard-shortcuts";
+import { BarChartIllustration } from "../illustrations/bar-chart";
+import { HubSpotLogo } from "../illustrations/hubspot-logo";
+import { KeyboardShortcuts } from "../client-scroll";
+import { CardsChat } from "../chat-example";
 
 export const UnlikeAnyTool = () => (
   <div className="text-white">
     <Container>
       <div className="text-center">
         <h2 className="mb-4 text-4xl md:mb-7 md:text-7xl">
-          Unlike any tool
-          <br className="hidden md:inline-block" /> you've used before
+          Unlike any BizOps
+          <br className="hidden md:inline-block" /> employee you've met before.
         </h2>
         <p className="mx-auto mb-12 max-w-[68rem] text-lg text-primary-text md:mb-7 md:text-xl">
-          Designed to the last pixel and engineered with unforgiving precision,
-          Linear combines UI elegance with world-class performance.
+          I've engineered financial models with unforgiving precision,
+          combining accuracy and speed with high-fidelity and performance. 
         </p>
       </div>
     </Container>
@@ -23,56 +23,39 @@ export const UnlikeAnyTool = () => (
       <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto px-8 pb-12 md:flex-wrap md:overflow-hidden">
         <div className="relative flex min-h-[48rem] w-full shrink-0 snap-center flex-col items-center justify-end overflow-hidden rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-8 text-center md:max-w-[calc(66.66%-12px)] md:basis-[calc(66.66%-12px)] md:p-14">
           <KeyboardShortcuts />
-          <p className="mb-4 text-3xl">Built for your keyboard</p>
+          <p className="mb-4 text-3xl">Discover new clients</p>
           <p className="text-md text-primary-text">
-            Fly through your tasks with rapid-fire keyboard shortcuts for
-            everything. Literally everything.
+            I've  <a className = "underline" href="https://docs.google.com/spreadsheets/d/1lAczUu_2sleG91ns2FNP9QeY7wOLLQRNrZUmOpa89r8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">identiifed  &gt;100 ideal fit customers</a>
+            &nbsp;for Linear's sales team using public data 
           </p>
         </div>
         <div className="relative flex min-h-[48rem] w-full shrink-0 snap-center flex-col items-center justify-end overflow-hidden rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-8 text-center md:basis-[calc(33.33%-12px)] md:p-14">
-          <div className="mask-linear-faded absolute top-[-9.2rem]">
-            <ZapIllustration />
+          <div className=" absolute top-[-9.2rem]">
+          <BarChartIllustration/>
           </div>
-          <p className="mb-4 text-3xl">Breathtakingly fast</p>
+          <p className="mb-4 text-3xl">Incredibly Precise</p>
           <p className="text-md text-primary-text">
-            Built for speed with 50ms interactions and real-time sync.
+            I've built <a className ="underline" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/spreadsheets/d/1lmNvdc6ncLvChNYP_IXk11G6nXv96WDwMCT5EN2_X50/edit?usp=sharing">forecasts</a> and a <a className="underline" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/spreadsheets/d/101g0H5ol6Q3K2Qfp0OfRNQnn1cMCkr35ipur6rUcHrQ/edit?usp=sharing">models</a> for every size business
           </p>
         </div>
         <div className="group relative flex min-h-[48rem] w-full shrink-0 snap-center flex-col items-center justify-end overflow-hidden rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-8 text-center md:basis-[calc(33.33%-12px)] md:p-14">
           <div className="pointer-events-none absolute top-[-8rem] w-[130%]">
-            <LogoLightIllustration />
+            <HubSpotLogo />
           </div>
-          <p className="mb-4 text-3xl">Designed for modern software teams</p>
+          <p className="mb-4 text-3xl">Expertise in modern Revenue software</p>
           <p className="text-md text-primary-text">
-            Comes with built-in workflows that create focus and routine.
+            I've negoiated, launched, and managed tools like Hubspot and Pocus
           </p>
-          <Button
-            className="absolute bottom-[20rem] translate-y-[30%] scale-[0.8] opacity-0 transition-[transform,opacity] group-hover:transform-none group-hover:opacity-100 [&_.highlight]:text-[1.1rem]"
-            variant="secondary"
-            size="small"
-            href="/"
-          >
-            <Highlight>Linear Method</Highlight>
-            Product principles
-            <svg
-              className="ml-1"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="#8A8F98"
-            >
-              <path d="M5.46967 11.4697C5.17678 11.7626 5.17678 12.2374 5.46967 12.5303C5.76256 12.8232 6.23744 12.8232 6.53033 12.5303L10.5303 8.53033C10.8207 8.23999 10.8236 7.77014 10.5368 7.47624L6.63419 3.47624C6.34492 3.17976 5.87009 3.17391 5.57361 3.46318C5.27713 3.75244 5.27128 4.22728 5.56054 4.52376L8.94583 7.99351L5.46967 11.4697Z"></path>
-            </svg>
-          </Button>
         </div>
         <div className="relative flex min-h-[48rem] w-full shrink-0 snap-center flex-col items-center justify-start overflow-hidden rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-8 text-center md:max-w-[calc(66.66%-12px)] md:basis-[calc(66.66%-12px)] md:p-14">
-          <CommandMenu />
           <div className="transition-opacity md:[.opened+&]:opacity-0">
-            <p className="mb-4 text-3xl">Meet your command line</p>
+            <p className="mb-4 text-3xl">Your Moden RevOps Expert </p>
             <p className="text-md text-primary-text">
-              Complete any action in seconds with the global command menu.
+              I can complete any request in record time using data + code
             </p>
           </div>
+          <CardsChat/>
+
         </div>
       </div>
     </div>

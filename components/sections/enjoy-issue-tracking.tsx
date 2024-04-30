@@ -16,65 +16,55 @@ export const EnjoyIssueTracking = () => {
       <Features.Main
         title={
           <>
-            Issue tracking
+            Endorsements by
             <br />
-            you'll enjoy using
+            people whose opinions matter
           </>
         }
-        image="/issues.webp"
-        text="Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team."
+        image=""
+        text=""
       />
       <Features.Grid
         features={[
           {
             icon: ParentSubIcon,
-            title: "Parent and sub-issues.",
-            text: "Break larger takss into smaller issues",
+            title: "Value Add.",
+            text: "Max brings structure and gravitas to any role. He immediately makes an impact on anything he touches.",
+            source: "— Previous Co-Founder"
           },
           {
             icon: AutomatedBacklogIcon,
-            title: "Automated backlog.",
-            text: "Linear will auto-close and auto-archive issues.",
+            title: "Does More With Less.",
+            text: "I have rarely seen someone produce results with such limited resources.",
+            source: "— Current Manager"
           },
           {
             icon: WorkflowsIcon,
-            title: "Custom workflows",
-            text: "Define unique issue states for each team.",
+            title: "Structured Thinker",
+            text: "Max has a rare ability to organize data and thoughts into a way thats both impactful and simple.",
+            source:"— Previous Manager"
           },
           {
             icon: CustomViewsIcon,
-            title: "Filters and custom views.",
-            text: "See only what's relevant for you.",
+            title: "Analytical Rigor.",
+            text: "Max produces some of the best analytical data, forecasts, and analysis I recieve.",
+            source: "— Previous Executive Leader"
           },
           {
             icon: DiscussionIcon,
-            title: "Discussion.",
-            text: "Collaborate on issues without losing context.",
+            title: "Great Collaborator.",
+            text: "Working with Max is fun because he brings a human element to business.",
+            source: "— Previous Peer"
           },
           {
             icon: IssuesIcon,
-            title: "Issue templates.",
-            text: "Guide your team to write effective issues.",
+            title: "Organizational Excellence.",
+            text: "Everything Max touches becomes more organized. Its a huge benefit at a start-up.",
+            source: "— Past Cross-Functional Partner"
           },
         ]}
       />
-      <Features.Cards
-        features={[
-          {
-            image: "/card-board.webp",
-            imageClassName: "top-[55%] md:top-[40%] w-[200%]",
-            title: "List and board",
-            text: "Switch between list and board layout to view work from any angle.",
-          },
-          {
-            image: "/card-views.webp",
-            imageClassName:
-              "top-[45%] left-[12px] md:top-[34%] md:left-[24px] w-[110%]",
-            title: "Make it yours",
-            text: "Quickly apply filters and operators to refine your issue lists and create custom views.",
-          },
-        ]}
-      />
+      
     </Features>
   );
 };

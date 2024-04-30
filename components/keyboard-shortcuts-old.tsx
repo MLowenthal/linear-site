@@ -1,21 +1,19 @@
-"use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Button, Highlight } from "./button";
-import { KeyboardIllustration } from "./illustrations/keyboard";
 
 const shortcuts = [
-  { text: "Opens command line", keys: "⌘k" },
-  { text: "Assign issue to me", keys: "i" },
-  { text: "Assign issue to", keys: "a" },
-  { text: "Change issue status", keys: "s" },
-  { text: "Set issue priority", keys: "p" },
-  { text: "Add issue labels", keys: "l" },
-  { text: "Set due date", keys: "⇧d" },
-  { text: "Set parent issue", keys: "⇧⌘p" },
-  { text: "Add sub-issue", keys: "⇧⌘o" },
-  { text: "Create new issue", keys: "c" },
-  { text: "Create new issue from template", keys: "⌥c" },
-  { text: "Move to project", keys: "⇧p" },
+  { text: "Abstract", keys: "⌘k" },
+  { text: "Appcues", keys: "i" },
+  { text: "AppOnboard", keys: "a" },
+  { text: "Atmos", keys: "s" },
+  { text: "Automata", keys: "p" },
+  { text: "Bandpage", keys: "l" },
+  { text: "BitGo", keys: "⇧d" },
+  { text: "BoostUp.ai", keys: "⇧⌘p" },
+  { text: "Bright Money", keys: "⇧⌘o" },
+  { text: "Builder.io", keys: "c" },
+  { text: "Canopy", keys: "⌥c" },
+  { text: "Cardless", keys: "⇧p" },
 ];
 
 export const KeyboardShortcuts = () => {
@@ -37,6 +35,7 @@ export const KeyboardShortcuts = () => {
     clearTimeout(timeoutRef.current);
 
     if (!wrapperRef.current) return;
+
 
     const shortcut = wrapperRef.current.querySelector<HTMLButtonElement>(
       `button:nth-child(${index + 1})`
@@ -80,7 +79,6 @@ export const KeyboardShortcuts = () => {
         ref={illustrationWrapperRef}
         className="mask-keyboard absolute top-0 -left-12 h-full max-h-[30rem] w-[200%] md:relative md:left-auto md:w-full"
       >
-        <KeyboardIllustration />
       </div>
       <div className="my-7 hidden h-[4rem] min-h-[4rem] w-full overflow-hidden md:block">
         <div
