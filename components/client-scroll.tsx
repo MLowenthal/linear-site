@@ -118,15 +118,16 @@ const ROW_SIZE = 20; // Adjust this number as needed
 export const KeyboardShortcuts = () => {
   const shortcutRows = chunkArray(shortcuts, ROW_SIZE);
 
-    const onShortcutButtonClick = (url: string) => {
-      window.open(url, '_blank');
-    };
+  const onShortcutButtonClick = (url: string) => {
+    window.open(url, '_blank');
+  };
 
   return (
     <>
       {shortcutRows.map((rowShortcuts, rowIndex) => (
-        <div key={`row-${rowIndex}`} className="my-2 hidden h-[4rem] min-h-[4rem] w-full overflow-hidden md:block">
-          <div className="mask-shortcutkeys flex justify-center h-[6rem] max-w-full snap-x snap-mandatory gap-2 overflow-hidden overflow-y-hidden pb-8">
+        // Use Tailwind CSS for responsive design: hidden on mobile by default, block on medium screens and up
+        <div key={`row-${rowIndex}`} className="my-2 h-[4rem] min-h-[4rem] w-full overflow-x-auto md:block">
+          <div className="mask-shortcutkeys flex justify-center h-[6rem] max-w-full snap-x snap-mandatory gap-2 pb-8">
             {rowShortcuts.map((shortcut, index) => (
               <Button
                 className="shrink-0 snap-center first:ml-[40vw] last:mr-[40vw]"
