@@ -14,6 +14,7 @@ export const Clients = () => (
       <br className="hidden md:block" /> Across gaming, SaaS, and media.
     </p>
 
+    {/* Desktop version: Unchanged, logos in a row */}
     <div className="hidden md:flex md:flex-wrap md:justify-around md:gap-x-6 md:gap-y-8 [&_svg]:md:max-w-[16rem] [&_svg]:md:basis-[calc(25%-12px)]">
       <LinkedInLogo url="https://linkedin.com" />
       <FNDLogo url="https://foundation.app" />
@@ -21,6 +22,7 @@ export const Clients = () => (
       <CSLogo url="https://www.youtube.com/@ColinandSamir" />
     </div>
 
+    {/* Mobile version: Logos in a 2x2 grid */}
     <div className="flex flex-wrap justify-around gap-x-6 gap-y-8 md:hidden [&_svg]:max-w-[50%] [&_svg]:basis-[50%]">
       <LinkedInLogo url="https://linkedin.com" />
       <FNDLogo url="https://foundation.app" />
