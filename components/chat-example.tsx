@@ -1,11 +1,6 @@
-import * as React from "react";
-import { cn } from "../app/lib/utils";
-
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "./avatar";
+import React, { useState, useEffect } from 'react';
+import { Container } from "../container";
+import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 
 const users = [
   { userId: 0, name: "Cristina Cordova", avatar: "/img/cjc.jpeg" },
@@ -20,14 +15,25 @@ const messages = [
 ];
 
 export function CardsChat() {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="flex justify-center items-start w-full pt-4">
       <div className="flex flex-col space-y-4 pb-4 w-full sm:w-4/5 md:w-3/5">
-        {messages.slice(0, 3).map((message, index) => {
+        {messages.slice(0, isDesktop ? 3 : 2).map((message, index) => {
           const user = users.find(u => u.userId === message.userId);
           const isUserMessage = message.role === "user";
           return (
-            <div key={index} className={cn("flex items-end gap-2 w-full", isUserMessage ? "justify-end" : "justify-start")}>
+            <div key={index} className={`flex items-end gap-2 w-full ${isUserMessage ? "justify-end" : "justify-start"}`}>
               {!isUserMessage ? (
                 <>
                   <Avatar>
