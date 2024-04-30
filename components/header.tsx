@@ -29,9 +29,11 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 z-10 w-full border-b border-transparent-white backdrop-blur-[12px]">
-      <Container className="flex h-navigation-height">
-        <Link className="flex items-center text-md" href="/">
-        Why Max is a Good Fit For <Logo className="ml-2 mr-2 h-[1.8rem] w-[1.8rem]" /> Linear
+      <Container className="flex items-center justify-between h-navigation-height">
+        <Link href="/" className="flex items-center space-x-2 text-md truncate">
+          <span>Why Max is a Good Fit For</span>
+          <Logo className="h-[1.8rem] w-[1.8rem]" />
+          <span>Linear</span>
         </Link>
 
         <div
@@ -48,16 +50,11 @@ export const Header = () => {
                 : "translate-x-[-100vw] opacity-0"
             )}
           >
-            
+            {/* Navigation items here */}
           </nav>
         </div>
 
-        <div className="ml-auto flex h-full items-center">
-          <Button href="mailto:lowenthal.maxwell@gmail.com">Contact Me</Button> 
-          {/*make this route to the contact section of the page*/}
-        </div>
-
-        
+        <Button href="mailto:lowenthal.maxwell@gmail.com" className="whitespace-nowrap">Contact Me</Button>
       </Container>
     </header>
   );
