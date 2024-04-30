@@ -91,19 +91,26 @@ const FeatureGrid = ({ features } : FeatureGridProps) => {
       <div className="mb-16 grid w-full grid-cols-2 gap-y-9 md:mb-[14rem] md:grid-cols-3 md:text-md place-items-center text-sm text-primary-text">
         {features.map(({ title, text, source, icon: Icon }) => (
           <div
-            className="max-w-[25.6rem] px-4 md:px-0 [&_svg]:mb-[4px] [&_svg]:fill-white md:[&_svg]:mr-[6px] md:[&_svg]:mb-[2px] md:[&_svg]:inline"
+            className="max-w-[25.6rem] px-4 md:px-0 [&_svg]:mb-[4px] [&_svg]:fill-white md:[&_svg]:mr-[6px] md:[&_svg]:mb-[2px] md:[&_svg]:inline flex flex-col justify-between h-full sm:h-auto"
             key={title}
           >
-            <Icon />
-            <span className="block text-white md:inline mb-1">{title}</span>
-            <p className="mb-2">{text}</p>
-            <p className="italic text-right text-gray">{source}</p>
+            <div>
+              <Icon />
+              <span className="block text-white md:inline mb-1">{title}</span>
+            </div>
+            <div>
+              <p className="mb-2">{text}</p>
+              <p className="italic text-right text-gray">{source}</p>
+            </div>
           </div>
         ))}
       </div>
     </Container>
   );
 };
+
+
+
 
 
 type FeatureCardsProps = {
