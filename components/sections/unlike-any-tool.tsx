@@ -29,13 +29,13 @@ export const UnlikeAnyTool = () => (
           </p>
         </div>
         <div className="relative flex w-full shrink-0 snap-center flex-col items-center justify-end overflow-hidden rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-8 text-center md:basis-[calc(33.33%-12px)] md:p-14">
-          <div className="absolute top-[-9.2rem] z-0">
-            <BarChartIllustration />
-          </div>
           <p className="mb-4 text-3xl z-10 relative">Incredibly Precise</p>
           <p className="text-md text-primary-text z-10 relative">
             I've built <a className="underline" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/spreadsheets/d/1lmNvdc6ncLvChNYP_IXk11G6nXv96WDwMCT5EN2_X50/edit?usp=sharing">forecasts</a> and <a className="underline" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/spreadsheets/d/101g0H5ol6Q3K2Qfp0OfRNQnn1cMCkr35ipur6rUcHrQ/edit?usp=sharing">models</a> for every size business.
           </p>
+          <div className="absolute top-[-9.2rem] z-0">
+            <BarChartIllustration />
+          </div>
         </div>
         <div className="group relative flex w-full shrink-0 snap-center flex-col items-center justify-end overflow-hidden rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-8 text-center md:basis-[calc(33.33%-12px)] md:p-14">
           <div className="pointer-events-none absolute top-[-8rem] w-[130%] z-0">

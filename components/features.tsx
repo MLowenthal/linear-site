@@ -85,26 +85,27 @@ type FeatureGridProps = {
   }[];
 };
 
-const FeatureGrid = ({ features } : FeatureGridProps) => {
+const FeatureGrid = ({ features }: FeatureGridProps) => {
   return (
     <Container>
-      <div className="mb-16 grid w-full grid-cols-2 place-items-center gap-y-9 text-sm text-primary-text md:mb-[14rem] md:grid-cols-3 md:text-md">
+      <div className="mb-16 grid w-full grid-cols-1 gap-y-12 md:grid-cols-3 md:gap-y-9 md:mb-[14rem] md:text-md">
         {features.map(({ title, text, source, icon: Icon }) => (
           <div
-            className="max-w-[25.6rem] [&_svg]:mb-[4px] [&_svg]:fill-white md:[&_svg]:mr-[6px] md:[&_svg]:mb-[2px] md:[&_svg]:inline"
+            className="max-w-[25.6rem] flex flex-col items-start [&_svg]:mb-[4px] [&_svg]:fill-white md:[&_svg]:mr-[6px] md:[&_svg]:mb-[2px] md:[&_svg]:inline"
             key={title}
           >
-            <Icon />
-            <span className="block text-white md:inline">{title}</span>
-            <p>{text}</p>
-            <p className="italic text-right text-gray">{source}</p>
+            <div className="flex items-center">
+              <Icon />
+              <span className="ml-2 block text-white text-lg md:inline md:text-md">{title}</span>
+            </div>
+            <p className="mt-1 text-gray-300">{text}</p>
+            <p className="mt-2 italic text-right text-gray-400 w-full">{source}</p>
           </div>
         ))}
       </div>
     </Container>
   );
 };
-
 type FeatureCardsProps = {
   features: {
     image: string;
