@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Container } from "../container";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 
 const users = [
