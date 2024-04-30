@@ -2,7 +2,6 @@ import { LinkedInLogo } from "../logos/linkedin";
 import { FNDLogo } from "../logos/foundation";
 import { GDLogo } from "../logos/glassdoor";
 import { CSLogo } from "../logos/cs";
-import { NaavikLogo } from "../logos/naavik";
 import Link from "next/link";
 
 export const Clients = () => (
@@ -15,11 +14,21 @@ export const Clients = () => (
       <br className="hidden md:block" /> Across gaming, SaaS, and media. 
     </p>
 
-    <div className="flex flex-wrap justify-around gap-x-6 gap-y-8 [&_svg]:max-w-[16rem] [&_svg]:basis-[calc(50%-12px)] md:[&_svg]:basis-[calc(25%-12px)]">
-      <LinkedInLogo url="https://linkedin.com" className="basis-1/2 md:basis-auto" />
-      <FNDLogo url="https://foundation.app" className="basis-1/2 md:basis-auto" />
-      <GDLogo url="https://www.glassdoor.com/index.htm" className="basis-1/2 md:basis-auto" />
-      <CSLogo url="https://www.youtube.com/@ColinandSamir" className="basis-1/2 md:basis-auto" />
+    {/* Main div for logos, maintaining desktop styles */}
+    <div className="flex flex-wrap justify-around gap-x-6 gap-y-8 [&_svg]:max-w-[16rem] [&_svg]:basis-[calc(25%-12px)]">
+      {/* Mobile styling: each logo takes half width of the viewport to form two columns */}
+      <div className="w-1/2 md:w-auto">
+        <LinkedInLogo url="https://linkedin.com" />
+      </div>
+      <div className="w-1/2 md:w-auto">
+        <FNDLogo url="https://foundation.app" />
+      </div>
+      <div className="w-1/2 md:w-auto">
+        <GDLogo url="https://www.glassdoor.com/index.htm" />
+      </div>
+      <div className="w-1/2 md:w-auto">
+        <CSLogo url="https://www.youtube.com/@ColinandSamir" />
+      </div>
     </div>
   </>
 );
