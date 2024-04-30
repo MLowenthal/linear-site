@@ -2,7 +2,6 @@ import { LinkedInLogo } from "../logos/linkedin";
 import { FNDLogo } from "../logos/foundation";
 import { GDLogo } from "../logos/glassdoor";
 import { CSLogo } from "../logos/cs";
-import Link from "next/link";
 
 export const Clients = () => (
   <>
@@ -22,8 +21,8 @@ export const Clients = () => (
       <CSLogo url="https://www.youtube.com/@ColinandSamir" />
     </div>
 
-    {/* Mobile version: Logos in a 2x2 grid */}
-    <div className="flex flex-wrap justify-around gap-x-6 gap-y-8 md:hidden [&_svg]:max-w-[50%] [&_svg]:basis-[50%]">
+    {/* Mobile version: Adjusted to make logos in a 2x2 grid and take up full space available */}
+    <div className="flex flex-wrap justify-around gap-x-6 gap-y-8 md:hidden [&_svg]:w-1/2 [&_svg]:flex [&_svg]:items-center [&_svg]:justify-center">
       <LinkedInLogo url="https://linkedin.com" />
       <FNDLogo url="https://foundation.app" />
       <GDLogo url="https://www.glassdoor.com/index.htm" />
