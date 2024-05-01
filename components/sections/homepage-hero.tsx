@@ -16,9 +16,11 @@ export const HomepageHero = () => (
     </HeroSubtitle>
     <Button
       className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]"
-      href="/"
+      href="https://www.loom.com/share/dcf01e0a832a402a9c6a5f480f45acae?sid=3077e997-af68-40b8-98cc-30a8262aebde"
       variant="primary"
       size="large"
+      target="_blank"
+  rel="noopener noreferrer"
     >
       <span>Learn More About Me </span>
       <Highlight>
