@@ -7,8 +7,8 @@ import { Container } from "../container";
 export const ContactFuture = () => (
     <Hero>
     <HeroTitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-      Trainined for Linear's future. <br/>
-      Available to chat today.
+      Building Linear's Tomorrow.  <br/>
+      Available Today.
       <br className="hidden md:block" /> 
     </HeroTitle>
     <Button
