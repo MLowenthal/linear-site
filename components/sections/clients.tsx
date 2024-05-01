@@ -3,10 +3,9 @@ import { FNDLogo } from "../logos/foundation";
 import { GDLogo } from "../logos/glassdoor";
 import { CSLogo } from "../logos/cs";
 
-
 export const Clients = () => (
   <>
-    <p className="mb-12 text-center text-lg text-white md:text-xl">
+    <p className="mb-6 text-center text-lg text-white md:text-xl">
       <span className="text-primary-text">
         I've worked with some of the world's best revenue teams.
       </span>
@@ -22,8 +21,8 @@ export const Clients = () => (
       <CSLogo url="https://www.youtube.com/@ColinandSamir" />
     </div>
 
-    {/* Mobile version: Logos in a 2x2 grid */}
-    <div className="grid grid-cols-2 gap-6 px-4 py-4 md:hidden [&_svg]:max-w-full [&_svg]:basis-1/2">
+    {/* Mobile version: Logos in a 2x2 grid, centered under text */}
+    <div className="flex flex-wrap justify-center items-center gap-4 px-4 py-2 md:hidden [&_svg]:w-1/2 [&_svg]:h-auto [&_svg]:basis-1/2">
       <div>
         <LinkedInLogo url="https://linkedin.com" />
       </div>
@@ -39,4 +38,3 @@ export const Clients = () => (
     </div>
   </>
 );
-
